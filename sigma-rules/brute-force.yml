@@ -1,6 +1,6 @@
 title: Windows Brute Force Detection
 status: experimental
-description: Detects failed Windows logon attempts using Security Event ID 4625.
+description: Detects failed Windows logon attempts using Security Event ID 4625 that may indicate a brute force attack 
 author: Prishitha Reddy Lokareddy
 date: 2026-07-05
 
@@ -26,4 +26,4 @@ level: medium
 
 tags:
   - attack.credential_access
-  - attack.t1110
+  - attack.T1110
