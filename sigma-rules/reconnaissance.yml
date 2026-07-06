@@ -13,7 +13,7 @@ references:
 
 logsource:
   product: windows
-  service: process_creation
+  category: process_creation
 
 detection:
   selection:
@@ -31,8 +31,8 @@ level: medium
 
 tags:
   - attack.discovery
-  - attack.T1083
+  - attack.T1033
   - attack.T1082
   - attack.T1016
   - attack.T1087
-  - attack.T1069.061
+  - attack.T1069.001
