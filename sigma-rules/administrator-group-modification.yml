@@ -1,0 +1,29 @@
+title: Windows Administrator Group Modification Detection
+status: experimental
+description: Detects the addition of a user account to the local Administrators group using Windows Security Event ID 4732.
+author: Prishitha Reddy Lokareddy
+date: 2026-07-05
+
+references:
+  - https://attack.mitre.org/techniques/T1098/
+
+logsource:
+  product: windows
+  service: security
+
+detection:
+  selection:
+    EventID: 4732
+  condition: selection
+
+falsepositives:
+  - System administrators assigning legitimate administrative privileges.
+  - New employee role changes.
+  - Authorized maintenance activities.
+  - IT support granting temporary administrative access.
+
+level: high
+
+tags:
+  - attack.privilege_escalation
+  - attack.T1098
