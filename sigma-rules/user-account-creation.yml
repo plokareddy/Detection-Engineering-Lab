@@ -1,0 +1,29 @@
+title: Windows User Account Creation Detection
+status: experimental
+description: Detects the creation of a new local user account using Windows Security Event ID 4720.
+author: Prishitha Reddy Lokareddy
+date: 2026-07-05
+
+references:
+  - https://attack.mitre.org/techniques/T1136/
+
+logsource:
+  product: windows
+  service: security
+
+detection:
+  selection:
+    EventID: 4720
+  condition: selection
+
+falsepositives:
+  - IT administrators creating legitimate user accounts.
+  - New employee onboarding.
+  - Test accounts created for troubleshooting.
+  - Temporary accounts created for maintenance.
+
+level: medium
+
+tags:
+  - attack.persistence
+  - attack.T1136
